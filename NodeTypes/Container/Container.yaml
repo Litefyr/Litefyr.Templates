@@ -1,0 +1,25 @@
+'Litespeed.Templates:Document.Container':
+  superTypes:
+    'Litespeed.Templates:Mixin.Document': true
+  ui:
+    label: i18n
+    icon: folder-open
+    group: ~
+  constraints:
+    nodeTypes:
+      'Litespeed.Templates:Mixin.Template': true
+  properties:
+    title:
+      defaultValue: Vorlagen
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true
+    uriPathSegment:
+      defaultValue: vorlagen
+      ui:
+        inspector:
+          editorOptions:
+            disabled: true
+    _hiddenInIndex:
+      defaultValue: true

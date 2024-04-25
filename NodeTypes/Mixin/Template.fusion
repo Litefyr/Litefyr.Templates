@@ -1,0 +1,32 @@
+prototype(Litespeed.Templates:Mixin.Template) < prototype(Neos.Fusion:Component) {
+    prototype = ${Litespeed.Templates.options(node, 'prototype')}
+    description = ${Litespeed.Templates.options(node, 'description')}
+
+    renderer = Neos.Fusion:Case {
+        isLive {
+            condition = ${node.context.live || !props.prototype}
+            renderer = Neos.Fusion:Http.Message {
+                httpResponseHead {
+                    statusCode = 301
+                    headers.Location = Neos.Neos:NodeUri {
+                        node = ${site}
+                    }
+                }
+            }
+        }
+        inBackend {
+            condition = true
+            type = ${props.prototype}
+            element {
+                notification = Carbon.Notification:Backend {
+                    type = 'info'
+                    content = ${props.description}
+                }
+                hero = null
+                header = null
+                footer = null
+                aside = null
+            }
+        }
+    }
+}

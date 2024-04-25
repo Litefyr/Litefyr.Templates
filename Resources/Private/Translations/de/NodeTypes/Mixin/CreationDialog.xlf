@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="Litespeed.Templates" source-language="en" target-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="creationDialog.templateNodeIdentifier" xml:space="preserve">
+                <source>Template</source>
+                <target>Vorlage</target>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

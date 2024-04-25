@@ -1,0 +1,47 @@
+prototype(Litespeed.Templates:Document.Container) < prototype(Carbon.BackendDocument:Document) {
+    singleline = false
+    frontendRedirect {
+        node = ${site}
+    }
+    content = Neos.Fusion:Component {
+        items = Neos.Fusion:Map {
+            items = ${q(node).children('[instanceof Litespeed.Templates:Mixin.Template]').get()}
+            itemRenderer = Neos.Fusion:DataStructure {
+                title = ${q(item).property('title')}
+                label = ${Litespeed.Templates.options(item, 'label')}
+                color = ${Litespeed.Templates.options(item, 'color')}
+                count = ${q(item).children('main').children().count()}
+                href = Neos.Neos:NodeUri {
+                    node = ${item}
+                }
+            }
+        }
+        title = ${q(node).property('title')}
+
+        renderer = afx`
+            <h1 class="text-4xl text-center mb-10">{props.title}</h1>
+            <div class="w-full mt-12 max-w-lg mx-auto grid gap-5 lg:grid-cols-3 lg:max-w-none" @if={Carbon.Array.check(props.items)}>
+                <Neos.Fusion:Loop items={props.items}>
+                    <div class="shadow-lg overflow-clip relative px-6 py-4 bg-black/10 hover:bg-black/20">
+                        <div
+                            class="absolute text-xs font-bold uppercase tracking-wider top-0 right-0 px-2 py-1"
+                            style={'background:' + (item.color || 'rgba(0,0,0,0.25)')}
+                        >
+                            {item.label}
+                        </div>
+                        <a href={item.href} class="font-bold my-6 text-lg">
+                            <span class="absolute inset-0 z-10 pointer-events-auto" aria-hidden="true"></span>
+                            {item.title}
+                        </a>
+                        <div class="flex items-baseline opacity-80">
+                            <div class="text-xl font-bold">{item.count}</div>
+                            <div class="ml-1 text-sm">
+                                {Carbon.Backend.translate('contentcollection.label', null, [''], 'Main', 'Litespeed.Theme', item.count)}
+                            </div>
+                        </div>
+                    </div>
+                </Neos.Fusion:Loop>
+            </div>
+        `
+    }
+}

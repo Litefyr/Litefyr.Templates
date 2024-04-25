@@ -1,0 +1,12 @@
+'Litespeed.Templates:Mixin.CreationDialog.Article':
+  abstract: true
+  superTypes:
+    'Litespeed.Templates:Mixin.CreationDialog': true
+  ui:
+    creationDialog:
+      elements:
+        templateNodeIdentifier:
+          ui:
+            editorOptions:
+              dataSourceAdditionalData:
+                nodeTypes: ['Litespeed.Templates:Document.Article']

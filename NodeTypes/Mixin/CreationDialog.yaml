@@ -1,0 +1,24 @@
+'Litespeed.Templates:Mixin.CreationDialog':
+  abstract: true
+  ui:
+    creationDialog:
+      elements:
+        templateNodeIdentifier:
+          type: reference
+          ui:
+            label: i18n
+            editor: 'Neos.Neos/Inspector/Editors/SelectBoxEditor'
+            editorOptions:
+              dataSourceIdentifier: 'tms-select-nodedata'
+              dataSourceDisableCaching: true
+              dataSourceAdditionalData:
+                nodeTypes: ['Litespeed.Templates:Mixin.Template']
+                labelPropertyName: title
+  options:
+    template:
+      childNodes:
+        mainContentCollection:
+          when: '${data.templateNodeIdentifier}'
+          name: main
+          options:
+            childNodesToCopy: "${q(node).find('#' + data.templateNodeIdentifier).children('main').children().get()}"

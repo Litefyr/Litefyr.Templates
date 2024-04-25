@@ -1,0 +1,5 @@
+prototype(Litespeed.Templates:Document.Article) < prototype(Litespeed.Templates:Mixin.Template) {
+    renderer.inBackend.element.content {
+        isTemplate = true
+    }
+}

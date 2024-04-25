@@ -1,0 +1,1 @@
+prototype(Litespeed.Templates:Document.ContentPage) < prototype(Litespeed.Templates:Mixin.Template)

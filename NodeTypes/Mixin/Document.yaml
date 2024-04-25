@@ -1,0 +1,71 @@
+'Neos.Neos:Document':
+  constraints:
+    nodeTypes:
+      'Litespeed.Templates:Mixin.Document': false
+
+'Litespeed.Templates:Mixin.Document':
+  abstract: true
+  superTypes:
+    'Neos.Neos:Document': true
+    'Carbon.Plausible:Mixin.CustomEvent': false
+  ui:
+    inspector:
+      groups:
+        nodeInfo:
+          tab: hidden
+        yoast:
+          tab: hidden
+  constraints:
+    nodeTypes:
+      'Neos.Neos:Document': false
+  search:
+    fulltext:
+      enable: false
+      isRoot: false
+  properties:
+    titleOverride: {}
+    canonicalLink: {}
+    openGraphType: {}
+    openGraphTitle: {}
+    openGraphDescription: {}
+    openGraphImage: {}
+    metaDescription: {}
+    metaKeywords: {}
+    xmlSitemapChangeFrequency: {}
+    xmlSitemapPriority: {}
+    plausibleDoNotTrack: {}
+    mauticDoNotTrack: {}
+    focusKeyword: {}
+    isCornerstone: {}
+    metaRobotsNoindex:
+      defaultValue: true
+      ui:
+        inspector:
+          group: ~
+    metaRobotsNofollow:
+      defaultValue: true
+      ui:
+        inspector:
+          group: ~
+    _hidden:
+      ui:
+        inspector:
+          group: ~
+    _nodeType:
+      ui:
+        inspector:
+          group: ~
+    _hiddenBeforeDateTime:
+      ui:
+        inspector:
+          group: ~
+    _hiddenAfterDateTime:
+      ui:
+        inspector:
+          group: ~
+    _hiddenInIndex:
+      ui:
+        inspector:
+          group: ~
+          editorOptions:
+            disabled: true

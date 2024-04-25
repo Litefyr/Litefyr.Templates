@@ -1,0 +1,13 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        Litespeed.Templates: true
+    userInterface:
+      translation:
+        autoInclude:
+          Litespeed.Templates:
+            - 'NodeTypes/*'
+  Fusion:
+    defaultContext:
+      Litespeed.Templates: 'Litespeed\Templates\Eel\SettingsHelper'

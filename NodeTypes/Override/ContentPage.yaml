@@ -1,0 +1,16 @@
+##
+# Standard document NodeType
+#
+##
+
+'Litespeed.Agora:Document.ContentPage':
+  superTypes:
+    'Litespeed.Templates:Mixin.CreationDialog': true
+  ui:
+    creationDialog:
+      elements:
+        templateNodeIdentifier:
+          ui:
+            editorOptions:
+              dataSourceAdditionalData:
+                nodeTypes: ['Litespeed.Templates:Document.ContentPage']

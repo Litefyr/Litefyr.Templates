@@ -1,0 +1,8 @@
+'Litespeed.Agora:Document.HomePage':
+  constraints:
+    nodeTypes:
+      'Litespeed.Templates:Document.Container': true
+  childNodes:
+    templates:
+      type: 'Litespeed.Templates:Document.Container'
+      position: 'after notfound'
