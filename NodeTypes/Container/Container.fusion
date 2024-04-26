@@ -36,7 +36,7 @@ prototype(Litespeed.Templates:Document.Container) < prototype(Carbon.BackendDocu
                         <div class="flex items-baseline opacity-80">
                             <div class="text-xl font-bold">{item.count}</div>
                             <div class="ml-1 text-sm">
-                                {Carbon.Backend.translate('contentcollection.label', null, [''], 'Main', 'Litespeed.Theme', item.count)}
+                                {Carbon.Backend.translate('contentcollection.label', null, [''], 'Main', 'Litespeed.Integration', item.count)}
                             </div>
                         </div>
                     </div>

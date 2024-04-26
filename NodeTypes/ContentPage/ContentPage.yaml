@@ -10,4 +10,4 @@
   options:
     label: 'Litespeed.Templates:NodeTypes.Document.ContentPage:options.label'
     description: 'Litespeed.Templates:NodeTypes.Document.ContentPage:options.description'
-    prototype: Litespeed.Theme:Document.ContentPage
+    prototype: Litespeed.Integration:Document.ContentPage
