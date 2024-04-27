@@ -1,10 +1,10 @@
 {
-    "name": "litespeed/templates",
+    "name": "lspeed/templates",
     "description": "Add templates to Litespeed for faster generation of pages",
     "type": "neos-litespeed",
     "license": "GPL-3.0-or-later",
     "require": {
-        "litespeed/integration": "self.version",
+        "lspeed/integration": "self.version",
         "neos/neos": "*",
         "carbon/backenddocument": "^5.2",
         "carbon/notification": "^2.1",
