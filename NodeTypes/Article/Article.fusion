@@ -1,4 +1,4 @@
-prototype(Litespeed.Templates:Document.Article) < prototype(Litespeed.Templates:Mixin.Template) {
+prototype(Litefyr.Templates:Document.Article) < prototype(Litefyr.Templates:Mixin.Template) {
     renderer.inBackend.element.content {
         isTemplate = true
     }

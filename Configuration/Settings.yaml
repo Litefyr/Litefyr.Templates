@@ -2,12 +2,12 @@ Neos:
   Neos:
     fusion:
       autoInclude:
-        Litespeed.Templates: true
+        Litefyr.Templates: true
     userInterface:
       translation:
         autoInclude:
-          Litespeed.Templates:
+          Litefyr.Templates:
             - 'NodeTypes/*'
   Fusion:
     defaultContext:
-      Litespeed.Templates: 'Litespeed\Templates\Eel\SettingsHelper'
+      Litefyr.Templates: 'Litefyr\Templates\Eel\SettingsHelper'

@@ -1,7 +1,7 @@
-'Litespeed.Templates:Mixin.Template':
+'Litefyr.Templates:Mixin.Template':
   abstract: true
   superTypes:
-    'Litespeed.Templates:Mixin.Document': true
+    'Litefyr.Templates:Mixin.Document': true
   childNodes:
     main:
       type: 'Neos.Neos:ContentCollection'

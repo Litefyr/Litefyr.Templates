@@ -3,9 +3,9 @@
 #
 ##
 
-'Litespeed.Agora:Document.ContentPage':
+'Litefyr.Agora:Document.ContentPage':
   superTypes:
-    'Litespeed.Templates:Mixin.CreationDialog': true
+    'Litefyr.Templates:Mixin.CreationDialog': true
   ui:
     creationDialog:
       elements:
@@ -13,4 +13,4 @@
           ui:
             editorOptions:
               dataSourceAdditionalData:
-                nodeTypes: ['Litespeed.Templates:Document.ContentPage']
+                nodeTypes: ['Litefyr.Templates:Document.ContentPage']

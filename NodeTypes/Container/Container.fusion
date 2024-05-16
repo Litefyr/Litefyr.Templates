@@ -1,15 +1,15 @@
-prototype(Litespeed.Templates:Document.Container) < prototype(Carbon.BackendDocument:Document) {
+prototype(Litefyr.Templates:Document.Container) < prototype(Carbon.BackendDocument:Document) {
     singleline = false
     frontendRedirect {
         node = ${site}
     }
     content = Neos.Fusion:Component {
         items = Neos.Fusion:Map {
-            items = ${q(node).children('[instanceof Litespeed.Templates:Mixin.Template]').get()}
+            items = ${q(node).children('[instanceof Litefyr.Templates:Mixin.Template]').get()}
             itemRenderer = Neos.Fusion:DataStructure {
                 title = ${q(item).property('title')}
-                label = ${Litespeed.Templates.options(item, 'label')}
-                color = ${Litespeed.Templates.options(item, 'color')}
+                label = ${Litefyr.Templates.options(item, 'label')}
+                color = ${Litefyr.Templates.options(item, 'color')}
                 count = ${q(item).children('main').children().count()}
                 href = Neos.Neos:NodeUri {
                     node = ${item}
@@ -36,7 +36,7 @@ prototype(Litespeed.Templates:Document.Container) < prototype(Carbon.BackendDocu
                         <div class="flex items-baseline opacity-80">
                             <div class="text-xl font-bold">{item.count}</div>
                             <div class="ml-1 text-sm">
-                                {Carbon.Backend.translate('contentcollection.label', null, [''], 'Main', 'Litespeed.Integration', item.count)}
+                                {Carbon.Backend.translate('contentcollection.label', null, [''], 'Main', 'Litefyr.Integration', item.count)}
                             </div>
                         </div>
                     </div>

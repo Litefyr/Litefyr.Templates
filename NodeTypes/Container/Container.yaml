@@ -1,13 +1,13 @@
-'Litespeed.Templates:Document.Container':
+'Litefyr.Templates:Document.Container':
   superTypes:
-    'Litespeed.Templates:Mixin.Document': true
+    'Litefyr.Templates:Mixin.Document': true
   ui:
     label: i18n
     icon: folder-open
     group: ~
   constraints:
     nodeTypes:
-      'Litespeed.Templates:Mixin.Template': true
+      'Litefyr.Templates:Mixin.Template': true
   properties:
     title:
       defaultValue: Vorlagen

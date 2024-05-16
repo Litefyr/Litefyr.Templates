@@ -1,10 +1,10 @@
 {
-    "name": "lspeed/templates",
-    "description": "Add templates to Litespeed for faster generation of pages",
-    "type": "neos-litespeed",
+    "name": "litefyr/templates",
+    "description": "Add templates to Litefyr for faster generation of pages",
+    "type": "neos-litefyr",
     "license": "GPL-3.0-or-later",
     "require": {
-        "lspeed/integration": "self.version",
+        "litefyr/integration": "self.version",
         "neos/neos": "*",
         "carbon/backenddocument": "^5.2",
         "carbon/notification": "^2.1",
@@ -13,12 +13,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Litespeed\\Templates\\": "Classes/"
+            "Litefyr\\Templates\\": "Classes/"
         }
     },
     "keywords": [
         "flow",
         "neos",
-        "litespeed"
+        "litefyr"
     ]
 }

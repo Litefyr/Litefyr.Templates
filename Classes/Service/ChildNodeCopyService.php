@@ -1,6 +1,6 @@
 <?php
 
-namespace Litespeed\Templates\Service;
+namespace Litefyr\Templates\Service;
 
 use Flowpack\NodeTemplates\Service\EelEvaluationService;
 use Neos\ContentRepository\Domain\Model\NodeInterface;
@@ -18,27 +18,18 @@ class ChildNodeCopyService
 
     /**
      * @param NodeInterface $node
-     * @param array $context
-     * @param array $options
+     * @param array<mixed, mixed> $context
+     * @param array{childNodesToCopy?: string} $options
      * @return void
      */
-    public function copyChildNodesAfterTemplateApplication(
-        NodeInterface $node,
-        array $context,
-        array $options
-    ): void {
+    public function copyChildNodesAfterTemplateApplication(NodeInterface $node, array $context, array $options): void
+    {
         // Copy child nodes from template
         if (
             isset($options['childNodesToCopy']) &&
-            preg_match(
-                EelPackage::EelExpressionRecognizer,
-                $options['childNodesToCopy']
-            )
+            preg_match(EelPackage::EelExpressionRecognizer, $options['childNodesToCopy'])
         ) {
-            $childNodes = $this->eelEvaluationService->evaluateEelExpression(
-                $options['childNodesToCopy'],
-                $context
-            );
+            $childNodes = $this->eelEvaluationService->evaluateEelExpression($options['childNodesToCopy'], $context);
             /** @var NodeInterface $childNode */
             foreach ($childNodes as $childNode) {
                 $this->nodeOperations->copy($childNode, $node, 'into');

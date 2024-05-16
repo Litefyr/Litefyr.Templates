@@ -1,4 +1,4 @@
-'Litespeed.Templates:Mixin.CreationDialog':
+'Litefyr.Templates:Mixin.CreationDialog':
   abstract: true
   ui:
     creationDialog:
@@ -12,7 +12,7 @@
               dataSourceIdentifier: 'tms-select-nodedata'
               dataSourceDisableCaching: true
               dataSourceAdditionalData:
-                nodeTypes: ['Litespeed.Templates:Mixin.Template']
+                nodeTypes: ['Litefyr.Templates:Mixin.Template']
                 labelPropertyName: title
   options:
     template:

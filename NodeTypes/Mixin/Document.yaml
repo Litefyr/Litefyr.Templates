@@ -1,9 +1,9 @@
 'Neos.Neos:Document':
   constraints:
     nodeTypes:
-      'Litespeed.Templates:Mixin.Document': false
+      'Litefyr.Templates:Mixin.Document': false
 
-'Litespeed.Templates:Mixin.Document':
+'Litefyr.Templates:Mixin.Document':
   abstract: true
   superTypes:
     'Neos.Neos:Document': true

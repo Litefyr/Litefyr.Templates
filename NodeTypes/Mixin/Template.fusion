@@ -1,6 +1,6 @@
-prototype(Litespeed.Templates:Mixin.Template) < prototype(Neos.Fusion:Component) {
-    prototype = ${Litespeed.Templates.options(node, 'prototype')}
-    description = ${Litespeed.Templates.options(node, 'description')}
+prototype(Litefyr.Templates:Mixin.Template) < prototype(Neos.Fusion:Component) {
+    prototype = ${Litefyr.Templates.options(node, 'prototype')}
+    description = ${Litefyr.Templates.options(node, 'description')}
 
     renderer = Neos.Fusion:Case {
         isLive {

@@ -1,8 +1,8 @@
 <?php
 
-namespace Litespeed\Templates;
+namespace Litefyr\Templates;
 
-use Litespeed\Templates\Service\ChildNodeCopyService;
+use Litefyr\Templates\Service\ChildNodeCopyService;
 use Flowpack\NodeTemplates\Template;
 use Neos\ContentRepository\Domain\Model\Node;
 use Neos\Flow\Core\Bootstrap;
@@ -38,19 +38,12 @@ class Package extends BasePackage
             $oldValue,
             $newValue
         ) use ($bootstrap, &$newUriPathSegment) {
-            if (
-                $propertyName === 'title' &&
-                $node
-                    ->getNodeType()
-                    ->isOfType('Litespeed.Templates:Mixin.Document')
-            ) {
-                $nodeUriPathSegmentGenerator = $bootstrap
-                    ->getObjectManager()
-                    ->get(NodeUriPathSegmentGenerator::class);
-                $newUriPathSegment = strtolower(
-                    $nodeUriPathSegmentGenerator->generateUriPathSegment($node)
-                );
+            if ($propertyName === 'title' && $node->getNodeType()->isOfType('Litefyr.Templates:Mixin.Document')) {
+                $nodeUriPathSegmentGenerator = $bootstrap->getObjectManager()->get(NodeUriPathSegmentGenerator::class);
+                // @phpstan-ignore-next-line
+                $newUriPathSegment = strtolower($nodeUriPathSegmentGenerator->generateUriPathSegment($node));
                 $node->setProperty('uriPathSegment', $newUriPathSegment);
+                // @phpstan-ignore-next-line
                 $bootstrap
                     ->getObjectManager()
                     ->get(RouteCacheFlusher::class)

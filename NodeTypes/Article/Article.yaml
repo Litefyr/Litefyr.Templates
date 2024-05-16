@@ -1,7 +1,7 @@
-'Litespeed.Templates:Mixin.CreationDialog.Article':
+'Litefyr.Templates:Mixin.CreationDialog.Article':
   abstract: true
   superTypes:
-    'Litespeed.Templates:Mixin.CreationDialog': true
+    'Litefyr.Templates:Mixin.CreationDialog': true
   ui:
     creationDialog:
       elements:
@@ -9,4 +9,4 @@
           ui:
             editorOptions:
               dataSourceAdditionalData:
-                nodeTypes: ['Litespeed.Templates:Document.Article']
+                nodeTypes: ['Litefyr.Templates:Document.Article']
