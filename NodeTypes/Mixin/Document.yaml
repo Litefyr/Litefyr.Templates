@@ -8,6 +8,7 @@
   superTypes:
     'Neos.Neos:Document': true
     'Carbon.Plausible:Mixin.CustomEvent': false
+    'Litefyr.Integration:Mixin.DisableSearch': true
   ui:
     inspector:
       groups:
@@ -18,10 +19,6 @@
   constraints:
     nodeTypes:
       'Neos.Neos:Document': false
-  search:
-    fulltext:
-      enable: false
-      isRoot: false
   properties:
     titleOverride: {}
     canonicalLink: {}

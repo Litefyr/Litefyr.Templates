@@ -1,8 +1,3 @@
-##
-# Standard document NodeType
-#
-##
-
 'Litefyr.Agora:Document.ContentPage':
   superTypes:
     'Litefyr.Templates:Mixin.CreationDialog': true
