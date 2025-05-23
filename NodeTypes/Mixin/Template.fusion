@@ -2,6 +2,10 @@ prototype(Litefyr.Templates:Mixin.Template) < prototype(Neos.Fusion:Component) {
     prototype = ${Litefyr.Templates.options(node, 'prototype')}
     description = ${Litefyr.Templates.options(node, 'description')}
 
+    prototype(Neos.Neos:Page) {
+        bodyTag.attributes.style ='min-height: 0;'
+    }
+
     renderer = Neos.Fusion:Case {
         isLive {
             condition = ${node.context.live || !props.prototype}

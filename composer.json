@@ -6,7 +6,7 @@
     "require": {
         "litefyr/integration": "self.version",
         "neos/neos": "*",
-        "carbon/backenddocument": "^5.2",
+        "carbon/backenddocument": "^5.7",
         "carbon/notification": "^2.1",
         "flowpack/nodetemplates": "^1.2",
         "tms/select": "^1.4"

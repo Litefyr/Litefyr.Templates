@@ -8,7 +8,9 @@
   superTypes:
     'Neos.Neos:Document': true
     'Carbon.Plausible:Mixin.CustomEvent': false
+    'Litefyr.Integration:Mixin.SynUriPathSegmentWithTitle.Backend': true
     'Litefyr.Integration:Mixin.DisableSearch': true
+    'Garagist.ImageDirectory:Mixin.Ignore': true
   ui:
     inspector:
       groups:
@@ -20,6 +22,9 @@
     nodeTypes:
       'Neos.Neos:Document': false
   properties:
+    title:
+      ui:
+        label: 'Neos.Neos:NodeTypes.Document:properties.title'
     titleOverride: {}
     canonicalLink: {}
     openGraphType: {}
@@ -31,7 +36,6 @@
     xmlSitemapChangeFrequency: {}
     xmlSitemapPriority: {}
     plausibleDoNotTrack: {}
-    mauticDoNotTrack: {}
     focusKeyword: {}
     isCornerstone: {}
     metaRobotsNoindex:

@@ -11,15 +11,7 @@
   properties:
     title:
       defaultValue: Vorlagen
-      ui:
-        inspector:
-          editorOptions:
-            disabled: true
     uriPathSegment:
-      defaultValue: vorlagen
-      ui:
-        inspector:
-          editorOptions:
-            disabled: true
+      defaultValue: _vorlagen
     _hiddenInIndex:
       defaultValue: true

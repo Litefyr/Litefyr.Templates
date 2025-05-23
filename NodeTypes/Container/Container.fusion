@@ -29,8 +29,7 @@ prototype(Litefyr.Templates:Document.Container) < prototype(Carbon.BackendDocume
                         >
                             {item.label}
                         </div>
-                        <a href={item.href} class="font-bold my-6 text-lg">
-                            <span class="absolute inset-0 z-10 pointer-events-auto" aria-hidden="true"></span>
+                        <a href={item.href} class="font-bold my-6 text-lg before:absolute before:inset-0 before:pointer-events-auto before:z-10">
                             {item.title}
                         </a>
                         <div class="flex items-baseline opacity-80">

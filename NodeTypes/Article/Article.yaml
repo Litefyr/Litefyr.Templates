@@ -9,4 +9,4 @@
           ui:
             editorOptions:
               dataSourceAdditionalData:
-                nodeTypes: ['Litefyr.Templates:Document.Article']
+                nodeTypes: ['Litefyr.Articles:Document.Template']
